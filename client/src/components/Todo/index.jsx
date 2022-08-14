@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-
-import { Layout, Space, List } from 'antd';
+import { Layout, Space, List, Typography } from 'antd';
 
 import axios from '../../axios';
 
 import TodoItem from './Item';
 
-import './styles.css'
+import './styles.css';
 
+const { Title } = Typography;
 
 const Todo = () => {
   const [todos, setTodos] = useState([]);
@@ -19,15 +19,18 @@ const Todo = () => {
   }, []);
 
   return (
-    <section id="todo-list" className="todo-wrapper">
-      <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
-        <List
-          itemLayout="horizontal"
-          dataSource={todos}
-          renderItem={(todo) => <TodoItem todo={todo} />}
-        />
-      </Space>
-    </section>
+    <>
+      <Title className="todo-title">Todo</Title>
+      <section id="todo-list" className="todo-wrapper">
+        <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
+          <List
+            itemLayout="horizontal"
+            dataSource={todos}
+            renderItem={(todo) => <TodoItem todo={todo} />}
+          />
+        </Space>
+      </section>
+    </>
   );
 };
 
