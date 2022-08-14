@@ -4,12 +4,14 @@
   "private": true,
   "dependencies": {
     "axios": "^0.21.1",
+    "axios-mock-adapter": "^1.21.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "mock": "REACT_APP_USE_MOCK=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
