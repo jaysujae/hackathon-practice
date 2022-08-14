@@ -19,6 +19,7 @@ func main() {
 	})
 
 	api.GET("todos", controllers.GetTodos)
+	api.GET("keyword/:keyword", controllers.GetItems)
 	api.POST("todo", controllers.AddTodo)
 
 	r.Run()
