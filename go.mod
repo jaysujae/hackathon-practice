@@ -3,14 +3,6 @@ module github.com/vrnmthr/react-go-heroku
 go 1.12
 
 require (
-	github.com/gin-gonic/contrib v0.0.0-20201101042839-6a891bf89f19
-	github.com/gin-gonic/gin v1.8.1
-	github.com/go-playground/validator/v10 v10.11.0 // indirect
-	github.com/goccy/go-json v0.9.10 // indirect
-	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
-	github.com/pelletier/go-toml/v2 v2.0.2 // indirect
-	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa // indirect
-	golang.org/x/net v0.0.0-20220812174116-3211cb980234 // indirect
-	golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab // indirect
-	google.golang.org/protobuf v1.28.1 // indirect
+	github.com/gin-gonic/contrib v0.0.0-20190526021735-7fb7810ed2a0
+	github.com/gin-gonic/gin v1.4.0
 )
