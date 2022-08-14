@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import PingComponent from './PingComponent';
 
 function App() {
   return (
@@ -11,8 +10,6 @@ function App() {
         <p>
           Deploy React + Go to Heroku using Docker
         </p>
-        <PingComponent />
-
       </header>
     </div>
   );
