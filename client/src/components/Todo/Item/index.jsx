@@ -6,7 +6,9 @@ const TodoItem = ({ todo }) => {
   const [done, setDone] = useState(todo.done || false);
 
   const handleChange = useCallback((event) => {
-    setDone(event.currentTarget.checked);
+    const { checked } = event.target;
+
+    setDone(checked);
 
     // TODO: POST /api/todo
   }, []);
