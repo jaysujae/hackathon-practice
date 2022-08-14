@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/deandemo/react-go-heroku/controllers"
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 )
@@ -16,6 +17,9 @@ func main() {
 			"message": "pong",
 		})
 	})
+
+	api.GET("todos", controllers.GetTodos)
+	api.POST("todo", controllers.AddTodo)
 
 	r.Run()
 }
