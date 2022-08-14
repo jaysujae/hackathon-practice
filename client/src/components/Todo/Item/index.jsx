@@ -1,5 +1,7 @@
 import React, { useCallback, useState } from 'react';
 
+import { Checkbox, List } from 'antd';
+
 const TodoItem = ({ todo }) => {
   const [done, setDone] = useState(todo.done || false);
 
@@ -10,10 +12,11 @@ const TodoItem = ({ todo }) => {
   }, []);
 
   return (
-    <li>
-      {todo.title}{' '}
-      <input type="checkbox" checked={done} onChange={handleChange} />
-    </li>
+    <List.Item>
+      <Checkbox checked={done} onChange={handleChange}>
+        {todo.title}
+      </Checkbox>
+    </List.Item>
   );
 };
 

@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../..//axios';
+
+import { Layout, Space, List } from 'antd';
+
+import axios from '../../axios';
 
 import TodoItem from './Item';
+
+import './styles.css'
+
 
 const Todo = () => {
   const [todos, setTodos] = useState([]);
@@ -13,12 +19,14 @@ const Todo = () => {
   }, []);
 
   return (
-    <section id="todo-list">
-      <ul>
-        {todos.map((todo, index) => (
-          <TodoItem key={index} todo={todo} />
-        ))}
-      </ul>
+    <section id="todo-list" className="todo-wrapper">
+      <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
+        <List
+          itemLayout="horizontal"
+          dataSource={todos}
+          renderItem={(todo) => <TodoItem todo={todo} />}
+        />
+      </Space>
     </section>
   );
 };
